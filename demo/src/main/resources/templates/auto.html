@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMLcourse</title>
+    <link rel="stylesheet" th:href="@{/main.css}">
+</head>
+<body>
+<div class="wrapper">
+    <header class="container">
+        <span class="logo">HTMLcourse</span>
+        <nav>
+            <ul>
+                <li><a th:href="@{/reg}">Регистрация</a></li>
+                <li>|</li>
+                <li><a th:href="@{/auto}">Авторизация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form th:action="@{/auto-check}" method="post">
+        <div class="imgcontainer">
+            <img th:src="@{/images/img_avatar2.png}" alt="Аватар" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="name"><b>Пользователь</b></label>
+            <input type="text" placeholder="Введите имя" name="name" id="name" required>
+
+            <label for="password"><b>Пароль</b></label>
+            <input type="password" placeholder="Введите пароль" name="password" id="password" required>
+
+            <button type="submit">Вход</button>
+            <label>
+                <input type="checkbox" name="remember-me" id="remember-me"> Запомнить меня
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Отменить</button>
+            <span class="psw">Забыли <a th:href="@{/forgot-password}">пароль?</a></span>
+        </div>
+    </form>
+</div>
+</body>
+</html>

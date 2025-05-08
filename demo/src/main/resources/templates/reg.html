@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="container">
+        <span class="logo">HTMLcourse</span>
+        <nav>
+            <ul>
+                <li><a th:href="@{/reg}">Регистрация</a></li>
+                <li>|</li>
+                <li><a th:href="@{/auto}">Авторизация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero container">
+        <div class="hero--info">
+            <form th:action="@{/reg}" th:object="${user}" method="post" style="border:1px solid #ccc">
+                <div class="container">
+                    <h1>Форма регистрации</h1>
+                    <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+                    <hr>
+
+                    <label for="email"><b>Email</b></label>
+                    <label>
+                        <input type="text" th:field="*{email}" placeholder="Введите вашу почту" required>
+                    </label>
+
+                    <label for="psw"><b>Пароль</b></label>
+                    <label>
+                        <input type="password" th:field="*{password}" placeholder="Введите пароль" required>
+                    </label>
+
+                    <label for="name"><b>Имя</b></label>
+                    <label>
+                        <input type="text" th:field="*{name}" placeholder="Введите имя" required>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Запомнить меня
+                    </label>
+
+                    <p>Создавая учетную запись, вы соглашаетесь с нашими <a href="#" style="color:dodgerblue">Условиями и конфиденциальностью</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn">Отменить</button>
+                        <button type="submit" class="signupbtn">Регистрация</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

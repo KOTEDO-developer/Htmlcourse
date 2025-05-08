@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMLcourse</title>
+    <link rel="stylesheet" th:href="@{/css/head.css}">
+</head>
+<body>
+<div class="wrapper">
+    <header class="container">
+        <span class="logo">HTMLcourse</span>
+        <nav>
+            <ul>
+                <li><a th:href="@{/reg}">Регистрация</a></li>
+                <li>|</li>
+                <li><a th:href="@{/auto}">Авторизация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero container">
+        <div class="hero--info">
+            <h1>Приветствую вас на образовательном ресурсе, посвещенному языку программирования HTML.</h1>
+            <p>Для того чтобы начать нажмите:</p>
+            <a th:href="@{/vkr}" class="btn">СТАРТ</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

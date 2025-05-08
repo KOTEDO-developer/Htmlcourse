@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "jura", sans-serif;
+    font-weight: 600;
+    color: #000000
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background: #FFFFFF;
+    width: 100%;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+header {
+    padding: 30px 0;
+}
+/*header.logo {
+    font-size: 36px;
+    font-weight: 400;
+    padding: 30px;
+  }*/
+  
+header nav {
+    float: right;
+    width: 20%;
+}
+
+header nav ul {
+    list-style: none;
+    display:  flex;
+    justify-content: space-between;
+}
+
+header nav ul li{
+    display: inline-block;
+}
+
+header nav ul li a{
+    color: #000000;
+}
+
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    color: #5935AB;
+}
+
+/* Меню боковой панели */
+.sidenav {
+    height: 100%; /* Полная высота: удалите это, если вы хотите "авто" высота */
+    width: 293px; /* Установите ширину боковой панели */
+    position: fixed; /* Фиксированная боковая панель (оставайтесь на месте при прокрутке) */
+    z-index: 1; /* Оставайтесь с верху */
+    top: 0; /* Оставайтесь на вершине */
+    left: 0;
+    background-color: #d9d9d9; /* Черный */
+    overflow-x: hidden; /* Отключить горизонтальную прокрутку */
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+ 
+  .sidenav .logo {
+    font-size: 36px;
+    font-weight: 600;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+  }
+
+  /* Ссылки в меню навигации */
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 300px;
+    color: #000000;
+    display: block;
+  }
+
+  /* При наведении курсора мыши на навигационные ссылки измените их цвет */
+  .sidenav a:hover {
+    color: #5935AB;
+  }
+  
+  /* Стиль содержимого страницы */
+  .main {
+    margin-left: 380px; /* То же, что и ширина боковой панели */
+    margin-right: 380px;
+    padding: 10px;
+    padding-top: 20px;
+  }
+
+  .main .h1 {
+    font-size: 24px;
+    font-weight: 600px;
+    margin: 16px;
+  }
+  
+  .margin .p + p {
+    font-size: 18px;
+    margin: 16px;
+  }
+
+  /* На небольших экранах, где высота меньше 450px, измените стиль боковой панели (меньше отступов и меньший размер шрифта) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+  

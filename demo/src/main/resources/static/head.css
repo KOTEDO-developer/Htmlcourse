@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "jura", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background: #FFFFFF;
+    width: 100%; 
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+header {
+    padding: 30px 0;
+}
+header .logo {
+    font-size: 36px;
+    font-weight: 400;
+  }
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display:  flex;
+    justify-content: space-between;
+}
+
+header nav ul li{
+    display: inline-block;
+}
+
+header nav ul li a{
+    color: #000000;
+}
+
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    color: #5935AB;
+}
+
+header nav ul li.btn a {
+    background: #d9d9d9;
+    padding: 9px 17px;
+    border-radius: 16px;
+}
+
+header nav ul li.btn a:hover {
+    background: #000000;
+    color: #5935AB;
+}
+
+.hero {
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero--info {
+    width: 540px;
+    padding-top: 70px;
+    margin: 0 auto; 
+}
+
+.hero--info h1 {
+    color: #000000;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.hero--info p {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 40px;
+}
+
+.hero--info .btn {
+    background: #d9d9d9;
+    font-size: 32px;
+    color: #000000;
+    border-radius: 25px;
+    padding: 9px 25px;
+    border: 0;
+}
+
+.hero--info .btn:hover {
+    background: #000000;
+    color: #5935AB;
+}
+
